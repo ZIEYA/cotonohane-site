@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoToNoHa-Ne</title>
+<meta name="description" content="完全オフラインの文字起こし・議事録アプリ CoToNoHa-Ne の公式サイト。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="index.html">
+      <svg class="leaf" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 4C9 4 4 11 4 20c9 0 16-5 16-16Z" fill="#5FD08A" opacity="0.32"/>
+        <path d="M20 4C9 4 4 11 4 20c9 0 16-5 16-16Z" stroke="#15835A" stroke-width="1.4" stroke-linejoin="round"/>
+        <path d="M19 5C13 10 8 14 5 19" stroke="#1B9E6B" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <span class="nm">CoToNoHa-Ne</span>
+    </a>
+    <span class="spacer"></span>
+    <nav class="links">
+      <a href="support.html"><span class="ja">サポート</span><span class="en">Support</span></a>
+      <a href="privacy.html"><span class="ja">プライバシー</span><span class="en">Privacy</span></a>
+    </nav>
+    <div class="lang-toggle">
+      <button data-lang-btn="ja" onclick="setLang('ja')">日本語</button>
+      <button data-lang-btn="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow fade d1">
+      <span class="ja">完全オフライン文字起こし</span>
+      <span class="en">Fully offline transcription</span>
+    </p>
+
+    <h1 class="fade d1">
+      <span class="ja">声を、言葉の葉に。</span>
+      <span class="en">Turn voice into words.</span>
+    </h1>
+
+    <p class="lead fade d2">
+      <span class="ja">CoToNoHa-Ne は、録音から文字起こし・誤字修正・要約・話者分離まで、すべてをお使いのデバイスの中だけで行う議事録アプリです。あなたの声も記録も、外には出ていきません。</span>
+      <span class="en">CoToNoHa-Ne is a meeting-notes app that records, transcribes, corrects, summarizes, and separates speakers — entirely on your own device. Your voice and your notes never leave it.</span>
+    </p>
+
+    <div class="tiles fade d3">
+      <a class="tile" href="support.html">
+        <p class="t"><span class="ja">サポート</span><span class="en">Support</span></p>
+        <p class="d"><span class="ja">使い方・よくある質問・お問い合わせ</span><span class="en">How-to, FAQ, and contact</span></p>
+        <div class="arrow">→</div>
+      </a>
+      <a class="tile" href="privacy.html">
+        <p class="t"><span class="ja">プライバシーポリシー</span><span class="en">Privacy Policy</span></p>
+        <p class="d"><span class="ja">データを集めない、という約束</span><span class="en">Our promise: we collect nothing</span></p>
+        <div class="arrow">→</div>
+      </a>
+    </div>
+
+    <h2 class="ja">お問い合わせ</h2>
+    <h2 class="en">Contact</h2>
+    <div class="contact">
+      <p class="label"><span class="ja">メールでのお問い合わせ</span><span class="en">Email us</span></p>
+      <a class="mail" href="mailto:zieya.labo@gmail.com">zieya.labo@gmail.com</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 ZIEYA</span>
+    <span>·</span>
+    <a href="privacy.html"><span class="ja">プライバシー</span><span class="en">Privacy</span></a>
+    <a href="support.html"><span class="ja">サポート</span><span class="en">Support</span></a>
+    <a href="mailto:zieya.labo@gmail.com">zieya.labo@gmail.com</a>
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>

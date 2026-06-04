@@ -1,0 +1,264 @@
+/* ============================================================
+   CoToNoHa-Ne — site styles
+   落ち着いた和の editorial / 緑（葉）テーマ
+   ============================================================ */
+
+:root {
+  --paper:      #FBFAF5;
+  --paper-2:    #F4F2E9;
+  --ink:        #1E2B22;
+  --ink-soft:   #4C5A50;
+  --ink-faint:  #8A968C;
+  --green:      #1B9E6B;
+  --green-deep: #15835A;
+  --green-leaf: #5FD08A;
+  --line:       #E4E1D5;
+  --maxw:       720px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 500px at 80% -10%, rgba(95,208,138,.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(27,158,107,.07), transparent 55%),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Zen Kaku Gothic New", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  letter-spacing: .01em;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 言語切り替え */
+[data-lang="ja"] .en { display: none; }
+[data-lang="en"] .ja { display: none; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- ヘッダー ---------- */
+header.site {
+  border-bottom: 1px solid var(--line);
+  background: rgba(251,250,245,.72);
+  backdrop-filter: saturate(140%) blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.bar {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+}
+.brand .leaf { width: 22px; height: 22px; flex: 0 0 22px; }
+.brand .nm {
+  font-family: "Shippori Mincho", serif;
+  font-size: 18px;
+  letter-spacing: .04em;
+}
+.spacer { flex: 1; }
+nav.links { display: flex; gap: 18px; align-items: center; }
+nav.links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 13.5px;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+  transition: color .18s, border-color .18s;
+}
+nav.links a:hover { color: var(--green-deep); border-color: var(--green-leaf); }
+nav.links a.current { color: var(--green-deep); border-color: var(--green); }
+
+.lang-toggle { display: flex; gap: 2px; }
+.lang-toggle button {
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: .04em;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-faint);
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all .15s;
+}
+.lang-toggle button.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+/* ---------- 本文 ---------- */
+main { padding: 56px 0 40px; }
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+h1 {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.32;
+  letter-spacing: .02em;
+  margin: 0 0 10px;
+}
+h2 {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: .02em;
+  margin: 44px 0 12px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+h2:first-of-type { border-top: 0; padding-top: 0; }
+
+.updated {
+  color: var(--ink-faint);
+  font-size: 13px;
+  letter-spacing: .03em;
+  margin: 0 0 36px;
+}
+
+p { margin: 0 0 16px; color: var(--ink-soft); }
+strong { color: var(--ink); font-weight: 600; }
+
+ul { margin: 0 0 16px; padding-left: 1.1em; color: var(--ink-soft); }
+li { margin-bottom: 7px; }
+li::marker { color: var(--green-leaf); }
+
+a.inline { color: var(--green-deep); text-decoration: none; border-bottom: 1px solid var(--green-leaf); }
+a.inline:hover { background: rgba(95,208,138,.14); }
+
+/* リード文 */
+.lead {
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--ink);
+}
+
+/* FAQ / カード */
+.faq { margin: 8px 0 0; }
+.qa {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.55);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+}
+.qa .q {
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 6px;
+  display: flex;
+  gap: 9px;
+}
+.qa .q::before {
+  content: "Q";
+  font-family: "Shippori Mincho", serif;
+  color: var(--green);
+  font-weight: 700;
+}
+.qa .a { margin: 0; color: var(--ink-soft); }
+
+/* 連絡先ボックス */
+.contact {
+  margin-top: 14px;
+  border: 1px solid var(--green-leaf);
+  background: linear-gradient(180deg, rgba(95,208,138,.08), rgba(95,208,138,.03));
+  border-radius: 16px;
+  padding: 22px 24px;
+}
+.contact .label {
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+.contact a.mail {
+  font-family: "Shippori Mincho", serif;
+  font-size: 20px;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px solid var(--green-leaf);
+}
+.contact a.mail:hover { color: var(--green-deep); }
+
+/* ホームの大きなナビ */
+.tiles { display: grid; gap: 16px; margin-top: 28px; }
+@media (min-width: 560px){ .tiles { grid-template-columns: 1fr 1fr; } }
+.tile {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.6);
+  border-radius: 16px;
+  padding: 22px 22px 20px;
+  transition: transform .18s, border-color .18s, box-shadow .18s;
+}
+.tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--green-leaf);
+  box-shadow: 0 10px 30px rgba(21,131,90,.10);
+}
+.tile .t {
+  font-family: "Shippori Mincho", serif;
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+.tile .d { font-size: 13.5px; color: var(--ink-soft); margin: 0; }
+.tile .arrow { color: var(--green); margin-top: 12px; font-size: 14px; }
+
+/* ---------- フッター ---------- */
+footer.site {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  padding: 28px 0 40px;
+}
+footer.site .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+  color: var(--ink-faint);
+  font-size: 13px;
+}
+footer.site a { color: var(--ink-soft); text-decoration: none; }
+footer.site a:hover { color: var(--green-deep); }
+
+/* 登場アニメ（控えめ） */
+.fade { opacity: 0; transform: translateY(8px); animation: rise .7s ease forwards; }
+.fade.d1 { animation-delay: .05s; }
+.fade.d2 { animation-delay: .12s; }
+.fade.d3 { animation-delay: .19s; }
+@keyframes rise { to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce){ .fade { animation: none; opacity: 1; transform: none; } }
